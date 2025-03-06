@@ -21,5 +21,25 @@
     } else {
         echo "number is zero" . "\n";
     }
+
+    $a = 0;
+    $b = 1;
+    $n = 10;
+
+    echo "First 10 Fibonacci numbers: ";
+    for ($i = 0; $i < $n; $i++) {
+        echo $a . " ";
+        if ($a % 2 == 0) {
+            $evenNumbers[] = $a;
+        }
+        $temp = $a;
+        $a = $b;
+        $b = $temp + $b;
+    }
+
+    echo "\nEven numbers: ";
+    foreach ($evenNumbers as $even) {
+        echo $even . " ";
+    }
 ?>
 
